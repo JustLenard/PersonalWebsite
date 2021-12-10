@@ -326,6 +326,10 @@ ul {
 	margin: 0;
 }
 
+.post-navbar {
+	display: flex;
+}
+
 .post-intro {
 	color: #4b5156;
 	font-size: 16px;

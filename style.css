@@ -323,11 +323,29 @@ ul {
 
 .post-title {
 	color: black;
-	margin: 0;
+	margin: 1rem;
+	text-align: center;
 }
 
 .post-navbar {
 	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.icon-plus {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.fancy-border {
+	border: 1px solid black;
+	padding: 3px;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	border-top-right-radius: 50px;
 }
 
 .post-intro {

@@ -421,6 +421,11 @@ ul {
 	border: none;
 }
 
+#submit-btn:hover {
+	cursor: pointer;
+	filter: brightness(0.8);
+}
+
 @media screen and (max-width: 1200px) {
 	.main-container {
 		width: 95%;

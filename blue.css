@@ -14,3 +14,11 @@
 
 	--buttonColor: #17a2b8;
 }
+
+#light-mode {
+	border: 2px solid var(--previewShadow);
+}
+
+#light-mode:hover {
+	border-width: 5px;
+}

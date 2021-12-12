@@ -12,7 +12,9 @@
 			rel="stylesheet"
 		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="default.css" />
+		<link id="theme-style" rel="stylesheet" type="text/css" href="" />
+		<script src="script.js" defer></script>
 	</head>
 	<body>
 		<section class="s1">
@@ -41,10 +43,10 @@
 						</h5>
 
 						<div id="theme-options-wrapper">
-							<div id="light-mode" class="theme-dot"></div>
-							<div id="blue-mode" class="theme-dot"></div>
-							<div id="green-mode" class="theme-dot"></div>
-							<div id="purple-mode" class="theme-dot"></div>
+							<div data-mode="default" id="light-mode" class="theme-dot"></div>
+							<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+							<div data-mode="green" id="green-mode" class="theme-dot"></div>
+							<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
 						</div>
 
 						<p id="settings-node">
@@ -132,7 +134,7 @@
 					</div>
 
 					<div class="social-links">
-						<img id="social-image" src="images/Me9.jpeg" />
+						<h3>Find me on LinedIn</h3>
 
 						<h3>Find me on Kata-wars</h3>
 
@@ -149,73 +151,65 @@
 				<h3 style="text-align: center">Some of my past projects</h3>
 
 				<div class="post-wrapper">
-					<div>
-						<div class="post">
-							<img class="thumbnail" src="images/Me9.jpeg" />
-							<h6 class="post-title">Tic-Tac-Toe</h6>
-							<div class="post-navbar">
-								<div class="icon-plus fancy-border">
-									<img src="images/github.png" class="skill-icon" />
-									<a>Github</a>
-								</div>
-								<a class="fancy-border">Live Demo</a>
+					<div class="post">
+						<img class="thumbnail" src="images/Me9.jpeg" />
+						<h6 class="post-title">Tic-Tac-Toe</h6>
+						<div class="post-navbar">
+							<div class="icon-plus fancy-border">
+								<img src="images/github.png" class="skill-icon" />
+								<a>Github</a>
 							</div>
-							<div class="post-preview">
-								<p class="post-intro">
-									A single player Tic-Tac-Toe game with the ability of chosing
-									between 3 difficulties and playing as 'o' or 'x'. The
-									highlight of the project is the <b>minimax</b> alghorithm
-									which makes the ai unbeatable at the highest difficulty.
-								</p>
-							</div>
+							<a class="fancy-border">Live Demo</a>
+						</div>
+						<div class="post-preview">
+							<p class="post-intro">
+								A single player Tic-Tac-Toe game with the ability of chosing
+								between 3 difficulties and playing as 'o' or 'x'. The highlight
+								of the project is the <b>minimax</b> alghorithm which makes the
+								ai unbeatable at the highest difficulty.
+							</p>
 						</div>
 					</div>
 
-					<div>
-						<div class="post">
-							<img class="thumbnail" src="images/Me9.jpeg" />
-							<h6 class="post-title">Etcth-a-Sketch</h6>
-							<div class="post-navbar">
-								<div class="icon-plus fancy-border">
-									<img src="images/github.png" class="skill-icon" />
-									<a>Github</a>
-								</div>
-								<a class="fancy-border">Live Demo</a>
+					<div class="post">
+						<img class="thumbnail" src="images/Me9.jpeg" />
+						<h6 class="post-title">Etcth-a-Sketch</h6>
+						<div class="post-navbar">
+							<div class="icon-plus fancy-border">
+								<img src="images/github.png" class="skill-icon" />
+								<a>Github</a>
 							</div>
-							<div class="post-preview">
-								<p class="post-intro">
-									A drawing board that gives you at disposition the following
-									tools:
-									<b
-										>'Color picker', 'Pen', 'Rainbow Pen', 'Shadder' and
-										'Fill'</b
-									>. Besides that, you can <b>readjust</b> the size of the board
-									to your preferences.
-								</p>
-							</div>
+							<a class="fancy-border">Live Demo</a>
+						</div>
+						<div class="post-preview">
+							<p class="post-intro">
+								A drawing board that gives you at disposition the following
+								tools:
+								<b>'Color picker', 'Pen', 'Rainbow Pen', 'Shadder' and 'Fill'</b
+								>. Besides that, you can <b>readjust</b> the size of the board
+								to your preferences.
+							</p>
 						</div>
 					</div>
 
-					<div>
-						<div class="post">
-							<img class="thumbnail" src="images/Me9.jpeg" />
+					<div class="post">
+						<img class="thumbnail" src="images/Me9.jpeg" />
 
-							<h6 class="post-title">Calculator</h6>
-							<div class="post-navbar">
-								<div class="icon-plus fancy-border">
-									<img src="images/github.png" class="skill-icon" />
-									<a>Github</a>
-								</div>
-								<a class="fancy-border">Live Demo</a>
+						<h6 class="post-title">Calculator</h6>
+						<div class="post-navbar">
+							<div class="icon-plus fancy-border">
+								<img src="images/github.png" class="skill-icon" />
+								<a>Github</a>
 							</div>
-							<div class="post-preview">
-								<p class="post-intro">
-									This is not a simple calculator. No, my version of it can do
-									<b>complex</b> logic. It fully supports
-									<b>paranthesis and power</b>. Inputs like this: 2 * (8 ^ (3 -
-									2 * 0.5 + 9 ^ 2 / 3) + 5) ^ 0.5 - 5 are fully supported.
-								</p>
-							</div>
+							<a class="fancy-border">Live Demo</a>
+						</div>
+						<div class="post-preview">
+							<p class="post-intro">
+								This is not a simple calculator. No, my version of it can do
+								<b>complex</b> logic. It fully supports
+								<b>paranthesis and power</b>. Inputs like this: 2 * (8 ^ (3 - 2
+								* 0.5 + 9 ^ 2 / 3) + 5) ^ 0.5 - 5 are fully supported.
+							</p>
 						</div>
 					</div>
 				</div>

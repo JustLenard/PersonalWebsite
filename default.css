@@ -15,6 +15,10 @@
 	--buttonColor: black;
 }
 
+body * {
+	transition: 0.3s;
+}
+
 html,
 body {
 	padding: 0;
@@ -307,6 +311,9 @@ ul {
 	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 	-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	background-color: var(--secondaryColor);
+	display: flex;
+	flex-direction: column;
 }
 
 .thumbnail {
@@ -317,14 +324,16 @@ ul {
 }
 
 .post-preview {
-	background-color: #fff;
 	padding: 15px;
+	height: 100%;
 }
 
 .post-title {
-	color: black;
+	color: var(--secondaryText);
 	margin: 1rem;
 	text-align: center;
+	font-size: 1.25rem;
+	border-bottom: 1px solid black;
 }
 
 .post-navbar {
@@ -340,17 +349,36 @@ ul {
 }
 
 .fancy-border {
-	border: 1px solid black;
-	padding: 3px;
+	padding: 3.5px;
 	border-top-left-radius: 50px;
 	border-bottom-left-radius: 50px;
 	border-bottom-right-radius: 50px;
 	border-top-right-radius: 50px;
+	color: white;
+	border: 1px solid #5151c9;
+	background: #5151c9;
+	cursor: pointer;
+	margin-bottom: 1rem;
+	font-family: 'Roboto Mono', monospace;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.fancy-border:hover {
+	transition: 0.3s;
+	border: 1px solid var(--mainText);
+	transform: scale(1.1);
+}
+
+.fancy-border a {
+	color: white;
 }
 
 .post-intro {
-	color: #4b5156;
+	/* color: #4b5156; */
+	color: var(--secondaryText);
+
 	font-size: 16px;
+	height: 100%;
 }
 
 #contact-form {

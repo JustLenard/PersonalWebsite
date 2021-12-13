@@ -100,6 +100,32 @@ ul {
 	text-align: center;
 }
 
+#animated-text {
+	position: relative;
+}
+
+#animated-text::after {
+	content: '';
+	position: absolute;
+	right: -7px;
+	width: 2px;
+	height: 4.5rem;
+	border-right: 2px solid white;
+	animation: blink 0.75s infinite ease;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	/* 50% {
+		opacity: 0.5;
+	} */
+	100% {
+		opacity: 1;
+	}
+}
+
 .intro-wrapper {
 	background-color: var(--secondaryColor);
 	border: 1px solid var(--borderColor);

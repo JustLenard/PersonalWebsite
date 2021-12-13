@@ -15,10 +15,10 @@
 	--buttonColor: #8534a3;
 }
 
-#light-mode {
+/* #light-mode {
 	border: 2px solid var(--previewShadow);
 }
 
 #light-mode:hover {
 	border-width: 5px;
-}
+} */

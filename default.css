@@ -4,7 +4,7 @@
 
 	--borderColor: #c1c1c1;
 
-	--mainText: black;
+	--mainText: #192734;
 	--secondaryText: 4b5156;
 
 	--themeDotBorder: #24292e;
@@ -33,7 +33,8 @@ h5,
 h6,
 strong {
 	color: var(--mainText);
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Bakbak One', cursive;
+	font-size: 2rem;
 }
 
 p,
@@ -150,6 +151,15 @@ ul {
 #navigation {
 	margin: 0;
 	padding: 10px;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon-nav:hover {
+	transform: scale(1.2);
+	font-size: 1.1rem;
 }
 
 #navigation li {
@@ -292,6 +302,20 @@ ul {
 	display: grid;
 	align-items: center;
 	text-align: center;
+}
+
+.icons-social {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.icon-big {
+	height: 2.5rem;
+}
+
+.icon-big:hover {
+	transform: scale(1.2);
 }
 
 #social-image {

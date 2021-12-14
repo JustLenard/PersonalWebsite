@@ -59,7 +59,7 @@
 							</li>
 							<li><a class="icon-nav" href="#">Resume</a></li>
 
-							<li><a class="icon-nav" href="#">Contact</a></li>
+							<li><a class="icon-nav" href="#contact-form">Contact</a></li>
 						</div>
 					</div>
 
@@ -88,10 +88,7 @@
 								<div id="corner-tl" class="corner"></div>
 								<div id="corner-tr" class="corner"></div>
 								<h3>What do I do?</h3>
-								<p>
-									Got kind of tired of wasting my life so I decide to become a
-									Web-Developer
-								</p>
+								<p>I build cool stuff using Python and JavaScript.</p>
 								<div id="corner-bl" class="corner"></div>
 								<div id="corner-br" class="corner"></div>
 							</div>
@@ -106,7 +103,11 @@
 					<div class="about-me">
 						<h4>More about me</h4>
 
-						<p>1 paragraph</p>
+						<p>
+							A new Web-Developer with good understanding of the basics and
+							eager to enrich his portofolio and skills. In the process of
+							learning React right now.
+						</p>
 
 						<p>2 paragraph</p>
 
@@ -115,10 +116,13 @@
 						<h4>My skills:</h4>
 
 						<p>
-							A new Web-Developer with good understanding of the basics and
-							eager to enrich his portofolio and skills. In the process of
-							learning React right now.
-							<a target="_blank" href="resume.pdf">Download Resume</a>
+							Besides the skill listed below, I also dabbled in web Scraping and
+							bot creation using Selenium and Beautiful Soup in Python.
+						</p>
+
+						<p>
+							Right now and for the foreseeable future, I will be focusing on
+							learning React.
 						</p>
 
 						<div id="skills">
@@ -311,19 +315,20 @@
 
 				<form id="contact-form">
 					<label>Name</label>
-					<input class="input-field" type="text" name="name" />
+					<input class="input-field" type="text" name="name" id="name" />
 
 					<label>Subject</label>
-					<input class="input-field" type="text" name="subject" />
+					<input class="input-field" type="text" name="subject" id="subject" />
 
 					<label>Email</label>
-					<input class="input-field" type="text" name="email" />
+					<input class="input-field" type="email" name="email" id="email" />
 
 					<label>Message</label>
 					<textarea
 						class="input-field"
 						type="message"
 						name="message"
+						id="message"
 					></textarea>
 
 					<input id="submit-btn" type="submit" value="Send" />

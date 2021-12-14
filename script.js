@@ -12,11 +12,25 @@ let theme = localStorage.getItem('theme');
 var i = 0;
 var j = 0;
 
+document.querySelector('#contact-form').addEventListener('submit', submitForm);
+
+function submitForm(e) {
+	e.preventDefault();
+	console.log('whyy');
+	var name = getInputVal('name');
+	console.log(name);
+}
+
+function getInputVal(id) {
+	return document.getElementById(id).value;
+}
+
+// Text Animation
 function type() {
 	if (i < text.length) {
 		typeHere.textContent += text[i];
 		i++;
-		setTimeout(type, 300);
+		setTimeout(type, 250);
 	} else if (j < text2.length) {
 		place1.classList.remove('thingy');
 		place2.classList.add('thingy');
@@ -24,22 +38,21 @@ function type() {
 		j++;
 		if (j === 3) {
 			setTimeout(type, 2000);
+		} else if (j === 18) {
+			setTimeout(type, 2000);
 		} else {
-			setTimeout(type, 300);
+			setTimeout(type, 250);
 		}
 	} else if (j === text2.length) {
 		j++;
 		place2.classList.remove('thingy');
 		place1.classList.add('thingy');
-		setTimeout(type, 1000);
+		setTimeout(type, 1500);
 	} else if (j === text2.length + 1) {
 		j++;
-		console.log('Ia was here');
 		typeHere.classList.add('active');
-		console.log(typeHere.classList);
 		setTimeout(type, 1000);
 	} else if (typeHere.classList.contains('active')) {
-		console.log('I was here2 ');
 		typeHere.textContent = '';
 		place1.classList.remove('thingy');
 		place2.classList.add('thingy');
@@ -68,6 +81,7 @@ function type() {
 }
 setTimeout(type, 2000);
 
+// Themes
 if (theme === null) {
 	setTheme('default');
 } else {

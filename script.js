@@ -1,6 +1,72 @@
 const themes = document.querySelectorAll('.theme-dot');
+const typeHere = document.querySelector('#animated-text');
+const typeHere2 = document.querySelector('#animated-text2');
+const place1 = document.querySelector('#place1');
+const place2 = document.querySelector('#place2');
+
+const text = "console.log('";
+const text2 = "Hi, I am Vitalie')";
 
 let theme = localStorage.getItem('theme');
+
+var i = 0;
+var j = 0;
+
+function type() {
+	if (i < text.length) {
+		typeHere.textContent += text[i];
+		i++;
+		setTimeout(type, 300);
+	} else if (j < text2.length) {
+		place1.classList.remove('thingy');
+		place2.classList.add('thingy');
+		typeHere2.textContent += text2[j];
+		j++;
+		if (j === 3) {
+			setTimeout(type, 2000);
+		} else {
+			setTimeout(type, 300);
+		}
+	} else if (j === text2.length) {
+		j++;
+		place2.classList.remove('thingy');
+		place1.classList.add('thingy');
+		setTimeout(type, 1000);
+	} else if (j === text2.length + 1) {
+		j++;
+		console.log('Ia was here');
+		typeHere.classList.add('active');
+		console.log(typeHere.classList);
+		setTimeout(type, 1000);
+	} else if (typeHere.classList.contains('active')) {
+		console.log('I was here2 ');
+		typeHere.textContent = '';
+		place1.classList.remove('thingy');
+		place2.classList.add('thingy');
+		i = 100;
+		typeHere.classList.remove('active');
+		setTimeout(type, 1500);
+	} else if (i === 100) {
+		i++;
+		typeHere2.textContent = "Hi, I am Vitalie'";
+		setTimeout(type, 250);
+	} else if (i === 101) {
+		i++;
+		typeHere2.textContent = 'Hi, I am Vitalie';
+		setTimeout(type, 1000);
+	} else if (i === 102) {
+		i++;
+		typeHere2.textContent = 'Hi, I am Vitalie=';
+		setTimeout(type, 2000);
+	} else if (i === 103) {
+		i++;
+		typeHere2.textContent = 'Hi, I am Vitalie=)';
+		setTimeout(type, 2000);
+	} else if (i === 104) {
+		place2.classList.remove('thingy');
+	}
+}
+setTimeout(type, 2000);
 
 if (theme === null) {
 	setTheme('default');

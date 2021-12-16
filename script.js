@@ -1,6 +1,3 @@
-const firebase = require('firebase');
-require('firebase/firestore');
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
 	apiKey: 'AIzaSyBdsy-rkSmyS_efQ2GftaKqIZNLC2q-XlE',
@@ -10,8 +7,6 @@ const firebaseConfig = {
 	messagingSenderId: '233195005666',
 	appId: '1:233195005666:web:c445e6373c67b61a1ea0bb',
 };
-
-const app = initializeApp(firebaseConfig);
 
 const themes = document.querySelectorAll('.theme-dot');
 const typeHere = document.querySelector('#animated-text');

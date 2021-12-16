@@ -1,7 +1,5 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+const firebase = require('firebase');
+require('firebase/firestore');
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -13,7 +11,6 @@ const firebaseConfig = {
 	appId: '1:233195005666:web:c445e6373c67b61a1ea0bb',
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 const themes = document.querySelectorAll('.theme-dot');

@@ -12,7 +12,8 @@
 		/>
 		<link rel="stylesheet" type="text/css" href="default.css" />
 		<link id="theme-style" rel="stylesheet" type="text/css" href="" />
-		<!-- <script type="module"> // Import the functions you need from the SDKs you need import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js'; // TODO: Add SDKs for Firebase products that you want to use // https://firebase.google.com/docs/web/setup#available-libraries // Your web app's Firebase configuration const firebaseConfig = { apiKey: 'AIzaSyBdsy-rkSmyS_efQ2GftaKqIZNLC2q-XlE', authDomain: 'portfolio-280af.firebaseapp.com', projectId: 'portfolio-280af', storageBucket: 'portfolio-280af.appspot.com', messagingSenderId: '233195005666', appId: '1:233195005666:web:c445e6373c67b61a1ea0bb', }; // Initialize Firebase const app = initializeApp(firebaseConfig); </script> -->
+		<script type="module" src="firebase.js" defer></script>
+		<script src="script.js" defer></script>
 	</head>
 	<body>
 		<section class="s1">
@@ -287,96 +288,40 @@
 				<h3 style="text-align: center">Get in touch</h3>
 				<form id="contact-form">
 					<label>Name</label>
-					<input class="input-field" type="text" name="name" id="name" />
+					<input
+						class="input-field"
+						type="text"
+						name="name"
+						id="name"
+						required
+					/>
 					<label>Subject</label>
-					<input class="input-field" type="text" name="subject" id="subject" />
+					<input
+						class="input-field"
+						type="text"
+						name="subject"
+						id="subject"
+						required
+					/>
 					<label>Email</label>
-					<input class="input-field" type="email" name="email" id="email" />
+					<input
+						class="input-field"
+						type="email"
+						name="email"
+						id="email"
+						required
+					/>
 					<label>Message</label>
 					<textarea
 						class="input-field"
 						type="message"
 						name="message"
 						id="message"
+						required
 					></textarea>
 					<input id="submit-btn" type="submit" value="Send" />
 				</form>
 			</div>
 		</section>
-		<!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script> -->
-		<script type="module">
-			// Import the functions you need from the SDKs you need
-			import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
-			import {
-				getDatabase,
-				ref,
-				set,
-				child,
-				update,
-				remove,
-			} from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js';
-			// TODO: Add SDKs for Firebase products that you want to use
-			// https://firebase.google.com/docs/web/setup#available-libraries
-
-			// Your web app's Firebase configuration
-			const firebaseConfig = {
-				apiKey: 'AIzaSyD6OK6WdxmsrZSNDsmjnl7wAnUeijnQlms',
-				authDomain: 'portfolio-3712b.firebaseapp.com',
-				databaseURL:
-					'https://portfolio-3712b-default-rtdb.europe-west1.firebasedatabase.app',
-				projectId: 'portfolio-3712b',
-				storageBucket: 'portfolio-3712b.appspot.com',
-				messagingSenderId: '129962496740',
-				appId: '1:129962496740:web:e245db655ba93c6298d2f1',
-			};
-
-			// Initialize Firebase
-			const app = initializeApp(firebaseConfig);
-
-			const db = getDatabase();
-
-			document
-				.getElementById('contact-form')
-				.addEventListener('submit', submitForm);
-
-			function submitForm(e) {
-				e.preventDefault();
-				console.log('whyy');
-				var name = getInputVal('name');
-				var subject = getInputVal('subject');
-				var email = getInputVal('email');
-				var message = getInputVal('message');
-
-				// Save message
-				console.log(name);
-				insertData(name, subject, email, message);
-			}
-			function getInputVal(id) {
-				return document.getElementById(id).value;
-			}
-
-			// var messagesRef = firebase.database().ref('messages');
-
-			//Save message to FireBase
-			// function saveMessage(name, subject, email, message) {
-			// 	var newMessageRef = messagesRef.push();
-			// 	newMessageRef.set({
-			// 		name: name,
-			// 		subject: subject,
-			// 		email: email,
-			// 		message: message,
-			// 	});
-			// }
-			function insertData(name, subject, email, message) {
-				set(ref(db, 'Mails-' + name), {
-					name: name,
-					subject: subject,
-					email: email,
-					message: message,
-				});
-			}
-		</script>
-		<script src="script.js"></script>
 	</body>
 </html>

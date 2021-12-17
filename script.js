@@ -1,13 +1,3 @@
-// Your web app's Firebase configuration
-const firebaseConfig = {
-	apiKey: 'AIzaSyBdsy-rkSmyS_efQ2GftaKqIZNLC2q-XlE',
-	authDomain: 'portfolio-280af.firebaseapp.com',
-	projectId: 'portfolio-280af',
-	storageBucket: 'portfolio-280af.appspot.com',
-	messagingSenderId: '233195005666',
-	appId: '1:233195005666:web:c445e6373c67b61a1ea0bb',
-};
-
 const themes = document.querySelectorAll('.theme-dot');
 const typeHere = document.querySelector('#animated-text');
 const typeHere2 = document.querySelector('#animated-text2');
@@ -21,38 +11,6 @@ let theme = localStorage.getItem('theme');
 
 var i = 0;
 var j = 0;
-
-document.querySelector('#contact-form').addEventListener('submit', submitForm);
-
-// Deals with the data from Contact form.
-function submitForm(e) {
-	e.preventDefault();
-	console.log('whyy');
-	var name = getInputVal('name');
-	var subject = getInputVal('subject');
-	var email = getInputVal('email');
-	var message = getInputVal('message');
-
-	//Save message
-	// saveMessage(name, subject, email, message);
-}
-
-function getInputVal(id) {
-	return document.getElementById(id).value;
-}
-
-// var messagesRef = firebase.database().ref('messages');
-
-//Save message to FireBase
-function saveMessage(name, subject, email, message) {
-	var newMessageRef = messagesRef.push();
-	newMessageRef.set({
-		name: name,
-		subject: subject,
-		email: email,
-		message: message,
-	});
-}
 
 // Text Animation
 function type() {
